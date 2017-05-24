@@ -65,11 +65,11 @@ __(*)__ Answer the following questions by investigating the SAM file
 * What version of bwa was used to align the reads?
 * What is the name of the first read?
 * At what position does the alignment of the read start?
-
+```
     Use SAMtools for these questions
     samtools view -H aln.bam | less
     samtools view aln.bam | less
-
+```
     
 __(*)__ Sort the BAM file
 
@@ -84,9 +84,6 @@ __(*)__ Index the bam file
     samtools flagstat sorted.bam
     samtools idxstats sorted.bam
 
-#### Calculate the coverage per chromosome
-
-    genomeCoverageBed -ibam sorted.bam -g hg19.fasta > coverage.txt
 
   
 #### Prepare reference genome
@@ -222,18 +219,14 @@ __(*)__ Investigate result
 
 
 
-
-
 #### BONUS: VCF stats
 
 __(*)__ VCFlib - stats - shown here for one VCF file
 
-    vcfstats freeb_call.vcf > freeb_call_vcf_lib_stats.txt
+    vcfstats freebayes.vcf > freeb_call_vcf_lib_stats.txt
 
 
 
-
-    
     
 #### Useful information
 
