@@ -4,6 +4,7 @@ In this practical you will get to know basic tools for SAM/BAM manipulation and 
 
 ## Required tools
 
+* Bedtools - http://bedtools.readthedocs.io
 * Freebayes - https://github.com/ekg/freebayes
 * GATK - https://www.broadinstitute.org/gatk/download
 * IGV - https://www.broadinstitute.org/igv/home
@@ -12,6 +13,7 @@ In this practical you will get to know basic tools for SAM/BAM manipulation and 
 * SAMtools - http://samtools.sourceforge.net/‎
 * VCFtools - http://vcftools.sourceforge.net/
 * VarDict - https://github.com/AstraZeneca-NGS/VarDictJava
+
 
 
 ## Information
@@ -41,22 +43,24 @@ __(*)__ How big is the BAM file
     
 
 __(*)__ Inspect the header of the BAM file
+
+    module add samootls-1.3
     samtools ...
     samtools view -H aln.bam
 
 
 __(*)__ View the BAM file
-
-    module add samootls-1.3
+    
     samtools view <bam.file> | less
     
-__(*)__ How many reads are in the BAM file?<br/>
+__(*)__ How many reads are in the BAM file? <br/>
 Is there another way to count the reads (check the samtools view parameters - look for -v)
    
     samtools view <file.bam> | grep -v "^#" | wc -l
     samtools flagstat <file.bam>
     
 __(*)__ Answer the following questions by investigating the SAM file
+* Print only the SAM header
 * What version of the human assembly was used to perform the alignments?
 * What version of bwa was used to align the reads?
 * What is the name of the first read?
@@ -74,12 +78,15 @@ __(*)__ Sort the BAM file
 __(*)__ Index the bam file
     
     samtools index <sorted.bam>
-
+        
 
 #### Alignment stats
     samtools flagstat sorted.bam
     samtools idxstats sorted.bam
 
+#### Calculate the coverage per chromosome
+
+    genomeCoverageBed -ibam sorted.bam -g hg19.fasta > coverage.txt
 
   
 #### Prepare reference genome
@@ -172,7 +179,6 @@ __(*)__ Generate before after plots (requires R and ggplot2)
     
     java -Xmx8g -jar /bcga2016/GATK-3.5/GenomeAnalysisTK.jar -T AnalyzeCovariates -R hg19.fasta -L target.bed 
     -before recal_data_table.txt -after post_recal_data_table.txt -plots recalibration_plots.pdf
-
 
 
 __(*)__ Print recalibrated reads
