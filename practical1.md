@@ -12,7 +12,8 @@ In this practical you will get to know basic tools for SAM/BAM manipulation and 
 * Picard - http://picard.sourceforge.net/command-line-overview.shtml
 * SAMtools - http://samtools.sourceforge.net/‎
 * VCFtools - http://vcftools.sourceforge.net/
-* VarDict - https://github.com/AstraZeneca-NGS/VarDictJava
+* VCFlib - https://github.com/vcflib/vcflib
+* Tabix for vcf-tools - https://sourceforge.net/projects/samtools/files/tabix/
 
 
 
