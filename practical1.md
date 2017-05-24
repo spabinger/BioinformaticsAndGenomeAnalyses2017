@@ -9,9 +9,9 @@ In this practical you will get to know basic tools for SAM/BAM manipulation and 
 * GATK - https://www.broadinstitute.org/gatk/download
 * IGV - https://www.broadinstitute.org/igv/home
 * Java (7) - http://www.oracle.com/technetwork/java/javase/downloads/index.html?ssSourceSiteId=otnjp
-* Picard - http://picard.sourceforge.net/command-line-overview.shtml
+* Picard - http://broadinstitute.github.io/picard/
 * SAMtools - http://samtools.sourceforge.net/‎
-* VCFtools - http://vcftools.sourceforge.net/
+* VCFtools - https://vcftools.github.io/index.html
 * VCFlib - https://github.com/vcflib/vcflib
 * Tabix for vcf-tools - https://sourceforge.net/projects/samtools/files/tabix/
 
