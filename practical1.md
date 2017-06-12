@@ -48,7 +48,7 @@ __(*)__ How big is the BAM file
 
 __(*)__ Inspect the header of the BAM file
 
-    module add samootls-1.3
+    module add samtootls
     samtools ...
     samtools view -H aln.bam
 
