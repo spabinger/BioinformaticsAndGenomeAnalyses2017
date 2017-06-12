@@ -37,6 +37,9 @@ For some variant callers we use a [target file](target.bed) to shorten variant c
 
 #### SAMtools
 
+__(*)__ Unzip all files for the practicals
+    tar xyfz pabinger_files_for_pracicals.tar.gz -C ~
+
 
 __(*)__ How big is the BAM file
 
