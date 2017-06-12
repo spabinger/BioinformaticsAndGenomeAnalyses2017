@@ -108,27 +108,27 @@ __(*)__ Prepare fai index
 #### BAM file preparations
 __(*)__ Sort with Picard
     
-    java -Xmx2g -jar /BGA2017/picard-2.9.2/picard.jar SortSam I=aln.bam O=sorted_picard.bam SORT_ORDER=coordinate
+    java -Xmx2g -jar /BGA2017/picard-2.9.2/picard.jar SortSam I=small_sorted.bam O=small_sorted_picard.bam SORT_ORDER=coordinate
 
 
 __(*)__ Mark duplicates
      
-    java -Xmx2g -jar /bcga2016/picard-tools-2.2.1/picard.jar MarkDuplicates I=sorted_picard.bam O=dedup.bam M=metrics.txt
+    java -Xmx2g -jar /BGA2017/picard-2.9.2/picard.jar MarkDuplicates I=small_sorted_picard.bam O=dedup.bam M=metrics.txt
 
 
 __(*)__ Add ReadGroup
     
-    java -Xmx2g -jar /bcga2016/picard-tools-2.2.1/picard.jar AddOrReplaceReadGroups I=dedup.bam O=deduprg.bam RGID=group1 RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=sample1
+    java -Xmx2g -jar /BGA2017/picard-2.9.2/picard.jar AddOrReplaceReadGroups I=dedup.bam O=deduprg.bam RGID=group1 RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=sample1
 
 
 __(*)__ Index with Picard
     
-    java -Xmx2g -jar /bcga2016/picard-tools-2.2.1/picard.jar BuildBamIndex I=deduprg.bam O=deduprg.bam.bai VALIDATION_STRINGENCY=SILENT
+    java -Xmx2g -jar /BGA2017/picard-2.9.2/picard.jar BuildBamIndex I=deduprg.bam O=deduprg.bam.bai VALIDATION_STRINGENCY=SILENT
 
 __(*)__ Collect insert size metrics
     
     module add R-3.2.4
-    java -Xmx2g -jar /bcga2016/picard-tools-2.2.1/picard.jar CollectInsertSizeMetrics I=deduprg.bam O=insertSizeHistogram.txt H=insertSizeHistogram.pdf
+    java -Xmx2g -jar /BGA2017/picard-2.9.2/picard.jar CollectInsertSizeMetrics I=deduprg.bam O=insertSizeHistogram.txt H=insertSizeHistogram.pdf
     
 __(*)__ View the PDF
     evince insertSizeHistogram.pdf
