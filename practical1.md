@@ -98,7 +98,7 @@ __(*)__ Index the bam file
 __(*)__ Prepare dict index
     
     module add picard
-    java -jar -Xmx2G /bcga2016/picard-tools-2.2.1/picard.jar CreateSequenceDictionary R=hg19.fasta O=hg19.dict
+    java -jar -Xmx2G /BGA2017/picard-2.9.2/picard.jar CreateSequenceDictionary R=hg19.fasta O=hg19.dict
 
 __(*)__ Prepare fai index
     
@@ -108,7 +108,7 @@ __(*)__ Prepare fai index
 #### BAM file preparations
 __(*)__ Sort with Picard
     
-    java -Xmx2g -jar /bcga2016/picard-tools-2.2.1/picard.jar SortSam I=aln.bam O=sorted_picard.bam SORT_ORDER=coordinate
+    java -Xmx2g -jar /BGA2017/picard-2.9.2/picard.jar SortSam I=aln.bam O=sorted_picard.bam SORT_ORDER=coordinate
 
 
 __(*)__ Mark duplicates
