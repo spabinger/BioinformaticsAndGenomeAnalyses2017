@@ -196,7 +196,7 @@ __(*)__ Print recalibrated reads
 
 __(*)__ Now do variant calling
     
-    java -Xmx2g -jar /BGA2017/GenomeAnalysisTK-3.7/GenomeAnalysisTK.jar -T HaplotypeCaller -R hg19.fasta -nct 8 -L target.bed 
+    java -Xmx2g -jar /BGA2017/GenomeAnalysisTK-3.7/GenomeAnalysisTK.jar -T HaplotypeCaller -R hg19.fasta -nct 2 -L target.bed 
     -I dedup_rg_real_recal.bam --genotyping_mode DISCOVERY -o gatk.vcf
 
 __(*)__ Questions
