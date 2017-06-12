@@ -153,7 +153,8 @@ __(*)__ Known indel sites are here specified as variables - either copy the whol
 
 __(*)__ Realignment target creator
 
-    java -Xmx2g -jar /BCA2017/GenomeAnalysisTK-3.7/GenomeAnalysisTK.jar -T RealignerTargetCreator -R hg19.fasta -nt 8 -L target.bed \
+    java -Xmx2g -jar /BCA2017/GenomeAnalysisTK-3.7/GenomeAnalysisTK.jar -T RealignerTargetCreator \
+    -R hg19.fasta -nt 8 -L target.bed \
     -I deduprg.bam -known ${KNOWN_INDELS_1} -known ${KNOWN_INDELS_2} -o target_intervals.list
 
 __(*)__ Perform realignment
