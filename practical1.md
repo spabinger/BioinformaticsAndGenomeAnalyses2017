@@ -79,6 +79,9 @@ __(*)__ Sort the BAM file
 
     samtools sort -o sorted.bam -@ <THREADS> <file.bam>
     
+__(*)__ Extract small file
+    samtools view -h sorted.bam | head -n 50000 | samtools view -S -b -0 small_sorted.bam 
+    
 __(*)__ Index the bam file
     
     samtools index <sorted.bam>
