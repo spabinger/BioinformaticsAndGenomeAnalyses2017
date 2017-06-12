@@ -58,10 +58,10 @@ __(*)__ View the BAM file
     samtools view <bam.file> | less
     
 __(*)__ How many reads are in the BAM file? <br/>
-Is there another way to count the reads (check the samtools view parameters - look for -v)
+Is there another way to count the reads (check the samtools flagstat)
    
     samtools view <file.bam> | grep -v "^#" | wc -l
-    samtools flagstat <file.bam>
+    
     
 __(*)__ Answer the following questions by investigating the SAM file
 * Print only the SAM header
