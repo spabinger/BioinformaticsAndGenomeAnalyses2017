@@ -97,8 +97,8 @@ __(*)__ Index the bam file
 #### Prepare reference genome
 __(*)__ Prepare dict index
     
-    module add picard-tools-2.2.1
-    java -jar /bcga2016/picard-tools-2.2.1/picard.jar CreateSequenceDictionary R=hg19.fasta O=hg19.dict
+    module add picard
+    java -jar -Xmx2G /bcga2016/picard-tools-2.2.1/picard.jar CreateSequenceDictionary R=hg19.fasta O=hg19.dict
 
 __(*)__ Prepare fai index
     
