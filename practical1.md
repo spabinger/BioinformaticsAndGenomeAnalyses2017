@@ -165,7 +165,7 @@ __(*)__ Perform realignment
 
 __(*)__ Base quality recalibration
     
-    java -Xmx2g -jar /BG2017/GenomeAnalysisTK-3.7/GenomeAnalysisTK.jar -T BaseRecalibrator -R hg19.fasta -I dedup_rg_real.bam \
+    java -Xmx2g -jar /BGA2017/GenomeAnalysisTK-3.7/GenomeAnalysisTK.jar -T BaseRecalibrator -R hg19.fasta -I dedup_rg_real.bam \
     -knownSites ${KNOWN_INDELS_1} -knownSites ${KNOWN_INDELS_2} -o recal_data_table.txt -L target.bed 
     --maximum_cycle_value 800
 
@@ -184,7 +184,7 @@ __(*)__ Generate before after plots (requires R and ggplot2)
     Inside R call
     install.packages(c('reshape','gplots','gsalib'))
     
-    java -Xmx8g -jar /bcga2016/GATK-3.5/GenomeAnalysisTK.jar -T AnalyzeCovariates -R hg19.fasta -L target.bed 
+    java -Xmx8g -jar /BGA2017/GenomeAnalysisTK-3.7/GenomeAnalysisTK.jar -T AnalyzeCovariates -R hg19.fasta -L target.bed 
     -before recal_data_table.txt -after post_recal_data_table.txt -plots recalibration_plots.pdf
 
 
