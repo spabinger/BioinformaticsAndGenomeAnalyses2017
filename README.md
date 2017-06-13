@@ -6,7 +6,7 @@ Here you find instructions and material for the "Bioinformatics and genomes anal
 [http://meetings.embo.org/event/17-genome](http://meetings.embo.org/event/17-genome) <br/>
 Tools for variant analysis of Next Generation Genome Sequencing data
 
-* [Lecture Notes](Lecture_Notes_2017_VariantCallingAndAnnotation.pdf) - to be provided
+* [Lecture Notes](Lecture_Notes_2017_VariantCallingAndAnnotation.pdf) - now online!
 * [Practical 1](practical1.md)
 * [Practical files](https://mega.nz/#!5odGiKJa!1VexKRhNgexb_B9DaG4Ev0jyKqACoCaj2H6tUdz4FAI)
 
